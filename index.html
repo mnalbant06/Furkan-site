@@ -213,5 +213,20 @@
 
 <footer class="foot">© 2026 Furkan Utku Nalbant</footer>
 
+<dialog id="lb" aria-label="Photo viewer"><img id="lbimg" alt=""><button id="lbx" aria-label="Close">&times;</button></dialog>
+<script>
+(function(){
+var d=document.getElementById('lb'),im=document.getElementById('lbimg');
+if(!d||!d.showModal)return;
+function open(src,alt){im.src=src;im.alt=alt||'';d.showModal();}
+document.querySelectorAll('.pic').forEach(function(p){
+p.tabIndex=0;p.setAttribute('role','button');p.setAttribute('aria-label','Open photo: '+(p.alt||''));
+p.addEventListener('click',function(){open(p.currentSrc||p.src,p.alt);});
+p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(p.currentSrc||p.src,p.alt);}});
+});
+d.addEventListener('click',function(){d.close();});
+d.addEventListener('close',function(){im.removeAttribute('src');});
+})();
+</script>
 </body>
 </html>
