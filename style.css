@@ -69,3 +69,5 @@ a{color:var(--accent)}a:hover{color:var(--accent-d)}
 .side a{word-break:break-word}
 
 .foot{text-align:center;color:var(--muted);font-size:13px;padding:8px 16px 32px}
+
+.pic{display:block;width:100%;max-width:520px;max-height:300px;object-fit:cover;border-radius:8px;margin-top:12px;background:var(--tint)}
