@@ -21,7 +21,7 @@ a{color:var(--accent)}a:hover{color:var(--accent-d)}
 .card h2{font-size:20px;font-weight:600;margin-bottom:14px}
 
 .profile{padding:0;overflow:hidden}
-.banner{height:200px;background:linear-gradient(120deg,#134E4A 0%,#0F766E 55%,#5FA8A0 100%);position:relative}
+.banner{aspect-ratio:2000/744;background:linear-gradient(120deg,#134E4A 0%,#0F766E 55%,#5FA8A0 100%);position:relative}
 .banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pbody{padding:0 24px 24px;position:relative}
 .avatar{width:152px;height:152px;border-radius:50%;border:4px solid var(--card);background:var(--tint);margin-top:-76px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:600;color:var(--accent)}
@@ -88,3 +88,5 @@ a{color:var(--accent)}a:hover{color:var(--accent-d)}
 #lbimg{display:block;max-width:none;max-height:none;margin:auto;cursor:zoom-out}
 @media (max-width:900px){#lbimg{max-width:100%;height:auto}}
 #lbx{position:fixed;top:14px;right:18px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#1D2433;font-size:28px;line-height:1;cursor:pointer}
+
+@media (max-width:600px){.banner{aspect-ratio:auto;height:170px}.banner img{object-position:15% center}.avatar{width:104px;height:104px;margin-top:-34px;font-size:34px}.profile h1{margin-top:10px}}
